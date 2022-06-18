@@ -1,5 +1,6 @@
 ---
 import Author from '../components/Author.astro';
+import Column from '../components/Column.astro';
 import Footer from '../components/Footer.astro';
 
 export interface Props {
@@ -16,47 +17,48 @@ const { title } = Astro.props as Props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<div class="relative bg-indigo-800">
-			<div class="absolute inset-0">
-				<img
-					class="w-full h-full object-cover"
-					src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-					alt=""
-				/>
-				<div class="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true"></div>
-			</div>
-			<!-- <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-        Get in touch
-      </h1>
-      <p class="mt-6 text-xl text-indigo-100 max-w-3xl">
-        Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis
-        eu. Orci vel lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit
-        distinctio.
-      </p>
-    </div> -->
-			<!-- This example requires Tailwind CSS v2.0+ -->
-
-			<div class="relative max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-				<div class="text-center">
-					<h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
-						Take control of your team.
-					</h1>
-					<p class="max-w-xl mt-5 mx-auto text-xl text-indigo-100">
-						Start building for free, then add a site plan to go live. Account plans unlock
-						additional features.
-					</p>
+		<div class="mt-4 sm:mt-6 lg:mt-8">
+			<Column>
+				<div class="relative shadow-xl rounded-2xl overflow-hidden">
+					<div class="absolute inset-0">
+						<img
+							class="h-full w-full object-cover"
+							src="https://images.unsplash.com/photo-1599423423927-a2c777b40faa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3538&q=80"
+							alt=""
+						/>
+						<div class="absolute inset-0 bg-slate-400 mix-blend-multiply"></div>
+					</div>
+					<div class="relative px-4 py-24 sm:px-6 sm:py-32 lg:py-48 lg:px-8">
+						<h1
+							class="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-white"
+						>
+							Frontend Journey
+						</h1>
+						<p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+							Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
+							commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+						</p>
+					</div>
 				</div>
-			</div>
+			</Column>
 		</div>
 
-		<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<Column>
 			<slot />
-		</main>
+		</Column>
 
 		<Author />
-		<Footer />
+
+		<Column>
+			<Footer />
+		</Column>
 	</body>
 </html>
