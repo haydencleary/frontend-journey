@@ -55,7 +55,9 @@ const { title } = Astro.props as Props;
 		</div>
 
 		<Column>
-			<slot />
+			<main class="pt-16 sm:pt-24">
+				<slot />
+			</main>
 		</Column>
 
 		<div class="sm:py-8">
