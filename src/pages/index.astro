@@ -30,7 +30,9 @@ const articles = [
 ];
 ---
 <Layout title="Frontend Journey">
-	{articles.map((article) => {
-		return <Article {...article} />;
-	})}
+	<div class="space-y-24 pt-24">
+		{articles.map((article) => {
+			return <Article {...article} />;
+		})}
+	</div>
 </Layout>
