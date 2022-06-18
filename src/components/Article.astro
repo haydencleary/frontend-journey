@@ -10,10 +10,11 @@ export interface Props {
 const { title, description, href, src, alt } = Astro.props as Props;
 ---
 
-<!-- TODO repsonsive design -->
 <article class="w-full">
-	<div class="flex">
-		<div class="aspect-square w-full mr-8">
+	<div
+		class="flex flex-col md:flex-row space-y-8 md:space-x-8 md:space-y-0 max-w-md sm:max-w-none mx-auto"
+	>
+		<div class="aspect-square w-full md:max-w-sm">
 			<img class="object-cover shadow-lg rounded-xl" {src} {alt} />
 		</div>
 		<div>
