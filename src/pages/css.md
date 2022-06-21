@@ -2,16 +2,16 @@
 layout: '../layouts/Detail.astro'
 title: CSS
 prev: {
-	title: "HTML title",
+	title: "HTML: Building blocks of the web",
 	href: "/html"
 }
 next: {
-	title: "Javascript title",
+	title: "Javascript: Interactivity at your fingertips",
 	href: "/javascript"
 }
 ---
 
-# Hi there!
+# **CSS: Styles for days**
 
 This is your first markdown page. It probably isn't styled much, although
 Markdown does support **bold** and _italics._
