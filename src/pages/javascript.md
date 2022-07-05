@@ -1,13 +1,11 @@
 ---
-layout: '../layouts/Detail.astro'
-title: Javascript
+layout: "../layouts/Detail.astro"
+title: "Javascript: Interactivity at your fingertips"
 prev: {
-	title: "2. CSS: Styles for days",
+	title: "CSS: Styles for days",
 	href: "/css"
 }
 ---
-
-# **3. Javascript: Interactivity at your fingertips**
 
 This is your first markdown page. It probably isn't styled much, although
 Markdown does support **bold** and _italics._

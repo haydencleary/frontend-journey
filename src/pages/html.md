@@ -1,13 +1,11 @@
 ---
-layout: '../layouts/Detail.astro'
-title: HTML
+layout: "../layouts/Detail.astro"
+title: "HTML: Building blocks of the web"
 next: {
-	title: "2. CSS: Styles for days",
+	title: "CSS: Styles for days",
 	href: "/css"
 }
 ---
-
-# **1. HTML: Building blocks of the web**
 
 This is your first markdown page. It probably isn't styled much, although
 Markdown does support **bold** and _italics._
