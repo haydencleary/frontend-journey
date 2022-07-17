@@ -1,6 +1,7 @@
 ---
 layout: "../layouts/Detail.astro"
-title: "Javascript: Interactivity at your fingertips"
+title: "Javascript"
+description: "Interactivity at your fingertips"
 prev: {
 	title: "CSS: Styles for days",
 	href: "/css"

@@ -1,6 +1,7 @@
 ---
 layout: "../layouts/Detail.astro"
-title: "CSS: Styles for days"
+title: "CSS"
+description: "Styles for days"
 prev: {
 	title: "HTML: Building blocks of the web",
 	href: "/html"

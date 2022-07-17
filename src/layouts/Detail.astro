@@ -9,6 +9,7 @@ export interface Step {
 export interface Props {
 	content: {
 		title: string;
+		description: string;
 		prev?: Step;
 		next?: Step;
 	};
@@ -17,7 +18,7 @@ export interface Props {
 const { content } = Astro.props as Props;
 ---
 
-<Layout title={content.title}>
+<Layout title={content.title} description={content.description}>
 	<div class="prose-brand prose-lg text-gray-700 max-w-prose mx-auto">
 		<slot />
 	</div>
