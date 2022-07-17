@@ -18,7 +18,7 @@ export interface Props {
 const { content } = Astro.props as Props;
 ---
 
-<Layout title={content.title} description={content.description}>
+<Layout title={`${content.title}: Frontend Journey`} description={content.description}>
 	<div class="prose-brand prose-lg text-gray-700 max-w-prose mx-auto">
 		<slot />
 	</div>
