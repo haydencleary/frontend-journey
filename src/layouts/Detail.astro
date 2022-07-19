@@ -1,31 +1,23 @@
 ---
 import Layout from './Layout.astro';
+import articles from '../data/articles.json';
 
-export interface Step {
-	title: string;
-	href: string;
-}
+const path = Astro.canonicalURL.pathname;
 
-export interface Props {
-	content: {
-		title: string;
-		description: string;
-		prev?: Step;
-		next?: Step;
-	};
-}
-
-const { content } = Astro.props as Props;
+const currentArticleIndex = articles.findIndex(({href}) => path === href);
+const currentArticle = articles[currentArticleIndex] ?? null;
+const previousArticle = articles[currentArticleIndex - 1] ?? null;
+const nextArticle = articles[currentArticleIndex + 1] ?? null;
 ---
 
-<Layout title={content.title} description={content.description}>
+<Layout title={currentArticle?.title} description={currentArticle?.description}>
 	<div class="prose-brand prose-lg text-gray-700 max-w-prose mx-auto">
 		<slot />
 	</div>
 	<section class="flex justify-between mt-16 sm:mt-24">
 		<div>
-			{content.prev ? <a
-				href={content.prev.href}
+			{previousArticle ? <a
+				href={previousArticle.href}
 				class="inline-flex items-center font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
 			>
 				<svg
@@ -42,18 +34,18 @@ const { content } = Astro.props as Props;
 				</svg>
 				<span>
 					Previous:<br />
-					{content.prev.title}
+					{previousArticle.title}
 				</span>
 			</a> : null}
 		</div>
 		<div>
-			{content.next ? <a
-				href={content.next.href}
+			{nextArticle ? <a
+				href={nextArticle.href}
 				class="inline-flex items-center font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
 			>
 				<span class="text-right">
 					Next:<br />
-					{content.next.title}
+					{nextArticle.title}
 				</span>
 				<svg
 					class="ml-3 h-5 w-5 text-brand-400"

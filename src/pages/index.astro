@@ -1,51 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Article from '../components/Article.astro';
-
-const articles = [
-	{
-		title: 'HTML',
-		description: 'Building blocks of the web',
-		href: '/html',
-		icon: '🧱',
-	},
-	{
-		title: 'CSS',
-		description: 'Styles for days',
-		href: '/css',
-		icon: '💅',
-	},
-	{
-		title: 'Javascript',
-		description: 'Interactivity at your fingertips',
-		href: '/javascript',
-		icon: '🚀',
-	},
-	{
-		title: 'Version control',
-		description: 'Parallel dimensions for your files',
-		href: '/version-control',
-		icon: '📑',
-	},
-	{
-		title: 'Frameworks',
-		description: 'Tools that help you move faster',
-		href: '/frameworks',
-		icon: '🧰',
-	},
-	{
-		title: 'Typescript',
-		description: 'Strong static types for javascript',
-		href: '/typescript',
-		icon: '💪',
-	},
-	{
-		title: 'Testing',
-		description: 'Make sure even the most complex code doesn\'t break',
-		href: '/testing',
-		icon: '🧪',
-	}
-];
+import articles from '../data/articles.json';
 ---
 
 <Layout title="Frontend Journey" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolor id eaque cupiditate quibusdam necessitatibus illum consequatur.">
